@@ -1,0 +1,14 @@
+<!-- from_details.xml -->
+<transitionSet transitionOrdering="sequential">
+  <transitionSet>
+    <fade android:fadingMode="fade_in" />
+    <targets>
+      <target android:excludeId="@id/checkMark" />
+    </targets>
+  </transitionSet>
+  <transitionSet transitionOrdering="together">
+    <changeImageTransform />
+    <changeBounds />
+  </transitionSet>
+  <fade android:fadingMode="fade_in" />
+</transitionSet>

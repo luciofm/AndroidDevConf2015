@@ -1,0 +1,6 @@
+
+  <!-- slide_left.xml -->
+  <slide xmlns:android="..."  android:slideEdge="left" />
+
+  <!-- getWindow().setExitTransition(
+          inflater.inflateTransition(R.transition.slide_left)); -->

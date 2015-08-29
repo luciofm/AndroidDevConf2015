@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:background="@color/light_muted_rgb"
+    tools:context="com.luciofm.droidcon.ifican.fragment.WorkFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:id="@+id/container2">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/whi">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageWhi1"
+                android:src="@drawable/whi_blur"
+                android:alpha="0"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageWhi2"
+                android:src="@drawable/whi"
+                android:alpha="0"
+                tools:alpha="1"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<!-- scene_transition.xml -->
+<transitionManager>
+    <transition
+        android:toScene="@layout/scene_scene2"
+        android:transition="@transition/to_details" />
+    <transition
+        android:toScene="@layout/scene_scene1"
+        android:transition="@transition/from_details" />
+</transitionManager>

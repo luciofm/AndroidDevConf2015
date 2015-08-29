@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white_opaque</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+
+<!--        <item name="android:windowExitTransition">@transition/fade</item>
+        <item name="android:windowReturnTransition">@transition/fade</item>
+        <item name="android:windowReenterTransition">@transition/fade</item>
+        <item name="android:windowEnterTransition">@transition/fade</item>
+
+        <item name="android:windowSharedElementExitTransition">@transition/move</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/move</item>-->
+
+        <item name="android:windowAllowEnterTransitionOverlap">false</item>
+        <!--<item name="android:windowAllowReturnTransitionOverlap">false</item>-->
+    </style>
+
+    <style name="DetailTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="BaseTextCode">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textColor">@color/white_almost_opaque</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="TextCode" parent="BaseTextCode">
+    </style>
+</resources>

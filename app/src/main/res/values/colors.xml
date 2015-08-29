@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_opaque">#ffffffff</color>
+    <color name="almost_white_opaque">#E0E0E0</color>
+    <color name="white_almost_opaque">#Efffffff</color>
+
+    <color name="light_muted_rgb">#ff97a3a5</color>
+    <color name="light_muted_title">#7f000000</color>
+    <color name="light_muted_body">#a7000000</color>
+
+    <color name="dark_vibrant_rgb">#ff438626</color>
+    <color name="dark_vibrant_title">#9f000000</color>
+    <color name="dark_vibrant_body">#f7000000</color>
+
+    <color name="vibrant_rgb">#ff46bafa</color>
+    <color name="vibrant_title">#77000000</color>
+    <color name="vibrant_body">#9f000000</color>
+
+    <color name="dark_muted_rgb">#ff2e465b</color>
+    <color name="dark_muted_title">#6fffffff</color>
+    <color name="dark_muted_body">#97ffffff</color>
+
+    <color name="muted_rgb">#ff5c96a2</color>
+    <color name="muted_title">#87000000</color>
+    <color name="muted_body">#bf000000</color>
+
+    <color name="light_vibrant_rgb">#fff7d44b</color>
+    <color name="light_vibrant_title">#6f000000</color>
+    <color name="light_vibrant_body">#97000000</color>
+
+    <color name="swatch_01_rgb">#ff396f96</color>
+    <color name="swatch_01_title">#9fffffff</color>
+    <color name="swatch_01_body">#dfffffff</color>
+
+    <color name="swatch_02_rgb">#ff212825</color>
+    <color name="swatch_02_title">#57ffffff</color>
+    <color name="swatch_02_body">#7fffffff</color>
+
+    <color name="swatch_03_rgb">#ff926776</color>
+    <color name="swatch_03_title">#a7ffffff</color>
+    <color name="swatch_03_body">#f7ffffff</color>
+
+    <color name="swatch_04_rgb">#ff9e9459</color>
+    <color name="swatch_04_title">#87000000</color>
+    <color name="swatch_04_body">#b7000000</color>
+
+    <color name="swatch_05_rgb">#ff5c7e6f</color>
+    <color name="swatch_05_title">#9f000000</color>
+    <color name="swatch_05_body">#f7000000</color>
+
+    <color name="swatch_06_rgb">#ffe3636f</color>
+    <color name="swatch_06_title">#87000000</color>
+    <color name="swatch_06_body">#b7000000</color>
+</resources>

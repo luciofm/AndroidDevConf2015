@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="java">
+<meta name="settings" content="no_pre">
+</head>
+<body bgcolor="#000000" text="#ffffff">
+<font face="monospace">
+image.getViewTreeObserver()<br>
+&nbsp;&nbsp; .addOnPreDrawListener(<font color="#ffff00"><b>new</b></font>&nbsp;ViewTreeObserver<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .OnPreDrawListener()&nbsp;{<br>
+&nbsp;&nbsp;<font color="#8080ff"><b>@Override</b></font><br>
+&nbsp;&nbsp;<font color="#00ff00"><b>public</b></font>&nbsp;<font color="#00ff00"><b>boolean</b></font>&nbsp;onPreDraw()&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image.getViewTreeObserver()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.removeOnPreDrawListener(<font color="#00ff00"><b>this</b></font>);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ff00"><b>int</b></font>[]&nbsp;screenLocation =&nbsp;<font color="#ffff00"><b>new</b></font>&nbsp;<font color="#00ff00"><b>int</b></font>[<font color="#ff40ff"><b>2</b></font>];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image.getLocationOnScreen(screenLocation);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;leftDelta = info.left - screenLocation[<font color="#ff40ff"><b>0</b></font>];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;topDelta = info.top - screenLocation[<font color="#ff40ff"><b>1</b></font>];<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;widthScale =&nbsp;(<font color="#00ff00"><b>float</b></font>)&nbsp;info.width / image.getWidth();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;heightScale =&nbsp;(<font color="#00ff00"><b>float</b></font>)&nbsp;info.height / image.getHeight();<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;runEnterAnimation();<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffff00"><b>return</b></font>&nbsp;<font color="#ff40ff"><b>true</b></font>;<br>
+&nbsp;&nbsp;}<br>
+});<br>
+</font>
+</body>
+</html>

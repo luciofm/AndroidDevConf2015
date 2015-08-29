@@ -1,0 +1,4 @@
+  <item
+    name="android:windowActivityTransitions">true</item>
+  <item
+    name="android:windowSharedElementEnterTransition">@android:transition/move</item>

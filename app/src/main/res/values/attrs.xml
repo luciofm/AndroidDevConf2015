@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextView">
+        <attr name="typeFace" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SquareGridLayout">
+        <attr name="spacing" format="dimension" />
+        <attr name="numColumns" format="integer" min="0" />
+    </declare-styleable>
+
+    <declare-styleable name="CanvasGridLayout">
+        <attr name="entrySpacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleTransition">
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextureVideoView">
+        <attr name="scaleType" format="string"/>
+    </declare-styleable>
+</resources>

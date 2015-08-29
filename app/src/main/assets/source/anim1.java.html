@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="java">
+<meta name="settings" content="no_pre">
+</head>
+<body bgcolor="#000000" text="#ffffff">
+<font face="monospace">
+&nbsp;&nbsp;<font color="#00ffff"><b>// Animate the size and position of the Image...</b></font><br>
+&nbsp;&nbsp;image.animate().setDuration(duration)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.scaleX(<font color="#ff40ff"><b>1</b></font>).scaleY(<font color="#ff40ff"><b>1</b></font>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.translationX(<font color="#ff40ff"><b>0</b></font>).translationY(<font color="#ff40ff"><b>0</b></font>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.setInterpolator(sDecelerator)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.setListener(<font color="#ffff00"><b>new</b></font>&nbsp;SimpleAnimatorListener()&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080ff"><b>@Override</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ff00"><b>public</b></font>&nbsp;<font color="#00ff00"><b>void</b></font>&nbsp;onAnimationEnd(Animator animation)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ffff"><b>// Slide up the text...</b></font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text1.setTranslationY(text1.getHeight());<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text1.animate().setDuration(duration /&nbsp;<font color="#ff40ff"><b>2</b></font>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.translationY(<font color="#ff40ff"><b>0</b></font>).alpha(<font color="#ff40ff"><b>1</b></font>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.setInterpolator(sDecelerator);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;});<br>
+<br>
+&nbsp;&nbsp;ObjectAnimator bgAnim = ObjectAnimator.ofInt(background,&nbsp;<font color="#ff40ff"><b>&quot;alpha&quot;</b></font>,&nbsp;<font color="#ff40ff"><b>0</b></font>,&nbsp;<font color="#ff40ff"><b>255</b></font>);<br>
+&nbsp;&nbsp;bgAnim.setDuration(duration *&nbsp;<font color="#ff40ff"><b>2</b></font>);<br>
+&nbsp;&nbsp;bgAnim.start();<br>
+</font>
+</body>
+</html>

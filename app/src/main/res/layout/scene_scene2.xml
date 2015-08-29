@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/sceneContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#5fFFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="115dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_image"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/txtAddToCollections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/white_opaque"
+        android:text="Add to Collections"
+        android:layout_toRightOf="@+id/image"/>
+
+    <View
+        android:id="@+id/graySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white_opaque"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/txtAddToCollections"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAddToCollections"
+        android:textColor="@color/white_opaque"
+        android:textColorHint="@color/white_opaque"
+        android:backgroundTint="@color/white_opaque"
+        android:gravity="center"
+        android:layout_below="@+id/graySeparator"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Write a description..."
+        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+        android:maxLines="3"
+        android:textSize="13sp">
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/sharing"
+        android:layout_below="@id/image"
+        android:visibility="visible">
+
+        <ToggleButton
+            android:id="@+id/toggleButtonFacebook"
+            android:layout_width="99dp"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/toggle_facebook_inactive"
+            android:textOff=""
+            android:textOn=""/>
+
+        <ToggleButton
+            android:id="@+id/toggleButtonTwitter"
+            android:layout_width="99dp"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/toggle_twitter_inactive"
+            android:textOff=""
+            android:textOn=""/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sharing"
+        android:orientation="vertical"
+        android:id="@+id/tagsContainer"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white_opaque"
+            android:text="Add tags" />
+
+        <EditText
+            android:id="@+id/editTextTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_round_corners"
+            android:ems="10"
+            android:hint=""
+            android:padding="10dp"
+            android:textColor="#ffa83051"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Tags are keywords that must describe the image."
+            android:textColor="@color/white_opaque"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Separate each tag by hitting the \'enter\' key."
+            android:textColor="@color/white_opaque"/>
+    </LinearLayout>
+</RelativeLayout>

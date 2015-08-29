@@ -1,0 +1,15 @@
+<LinearLayout
+    android:id="@+id/root">
+    <LinearLayout
+        android:id="@+id/registerForm">
+        <TextView android:id="@+id/registerTitle" />
+        <EditText android:id="@+id/editUser" />
+        <EditText android:id="@+id/editPass" />
+        <EditText android:id="@+id/editPass2" />
+	<Button android:id="@+id/buttonReg"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/loginForm">
+        ...
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="java">
+<meta name="settings" content="no_pre">
+</head>
+<body bgcolor="#000000" text="#ffffff">
+<font face="monospace">
+&nbsp;&nbsp;TransitionSet set =&nbsp;<font color="#ffff00">new</font>&nbsp;TransitionSet();<br>
+&nbsp;&nbsp;set.setOrdering(TransitionSet.ORDERING_SEQUENTIAL);<br>
+&nbsp;&nbsp;Pop pop =&nbsp;<font color="#ffff00">new</font>&nbsp;Pop();<br>
+&nbsp;&nbsp;pop.setPropagation(<font color="#ffff00">new</font>&nbsp;CircularPropagation());<br>
+&nbsp;&nbsp;pop.setEpicenterCallback(<font color="#ffff00">new</font>&nbsp;Transition.EpicenterCallback()&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff40ff">@Override</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00ff00">public</font>&nbsp;Rect onGetEpicenter(Transition transition)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container3.getLocationOnScreen(loc);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffff00">return</font>&nbsp;<font color="#ffff00">new</font>&nbsp;Rect(loc[<font color="#ffff00">0</font>], loc[<font color="#ffff00">1</font>], loc[<font color="#ffff00">0</font>]&nbsp;+ container3.getWidth(), loc[<font color="#ffff00">1</font>]&nbsp;+&nbsp;<font color="#ffff00">40</font>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;});<br>
+<br>
+&nbsp;&nbsp;set.addTransition(<font color="#ffff00">new</font>&nbsp;ChangeBounds()).addTransition(pop);<br>
+&nbsp;&nbsp;TransitionManager.beginDelayedTransition(container3, set);<br>
+</font>
+</body>
+</html>

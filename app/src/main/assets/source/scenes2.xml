@@ -1,0 +1,11 @@
+<!-- scene1.xml -->
+<RelativeLayout android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:id="@+id/checkMark" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/image" />
+</RelativeLayout>

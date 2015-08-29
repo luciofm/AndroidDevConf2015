@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="java">
+<meta name="settings" content="no_pre,no_foldcolumn,expand_tabs,prevent_copy=">
+</head>
+<body bgcolor="#000000" text="#ffffff">
+<font face="monospace">
+Property&lt;TextureVideoView, Matrix&gt; ANIMATED_TRANSFORM_PROPERTY<br>
+&nbsp;&nbsp; =&nbsp;<font color="#ffff00">new</font>&nbsp;Property&lt;TextureVideoView, Matrix&gt;(Matrix.<font color="#87ffaf">class</font>,&nbsp;<font color="#ff40ff">&quot;animatedTransform&quot;</font>)&nbsp;{<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<font color="#5fd7ff">@Override</font><br>
+&nbsp;&nbsp;<font color="#87ffaf">public</font>&nbsp;<font color="#87ffaf">void</font>&nbsp;set(TextureVideoView object, Matrix value)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;object.setTransform(value);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;object.invalidate();<br>
+&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;<font color="#5fd7ff">@Override</font><br>
+&nbsp;&nbsp;<font color="#87ffaf">public</font>&nbsp;Matrix get(TextureVideoView object)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffff00">return</font>&nbsp;<font color="#ff40ff">null</font>;<br>
+&nbsp;&nbsp;}<br>
+};<br>
+</font>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

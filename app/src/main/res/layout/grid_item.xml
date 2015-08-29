@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="300dp"
+    android:background="@drawable/item_background_material"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/thumb"
+        tools:tint="@color/vibrant_rgb"
+        tools:src="@drawable/ic_image" />
+    <com.luciofm.presentation.droiconit.widget.TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/text1"
+        android:textColor="@color/vibrant_rgb"
+        android:text="Shared Element"
+        android:gravity="top|center_horizontal"
+        android:textSize="@dimen/text_title_very_small"
+        />
+</LinearLayout>

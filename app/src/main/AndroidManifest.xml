@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luciofm.presentation.droiconit" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FirstActivity"
+            android:label="@string/title_activity_first"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.ThanksActivity"
+            android:label="@string/title_activity_thanks"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.MovieDetailsActivity"
+            android:label="@string/title_activity_details" >
+        </activity>
+        <activity
+            android:name=".activity.DetailsActivity"
+            android:label="@string/title_activity_details" >
+        </activity>
+    </application>
+
+</manifest>

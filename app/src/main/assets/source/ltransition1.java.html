@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v6">
+<meta name="syntax" content="java">
+<meta name="settings" content="no_pre">
+</head>
+<body bgcolor="#000000" text="#ffffff">
+<font face="monospace">
+<br>
+<font color="#00ffff"><b>// getView on Adapter</b></font><br>
+view.setTransitionName(dog.getname());<br>
+<br>
+<font color="#00ffff"><b>// OnItemClickListener</b></font><br>
+Dog dog =&nbsp;(Dog)&nbsp;view.getTag();<br>
+<br>
+Intent intent =&nbsp;<font color="#ffff00"><b>new</b></font>&nbsp;Intent(<font color="#00ff00"><b>this</b></font>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LTransitionActivity.<font color="#00ff00"><b>class</b></font>);<br>
+intent.putExtra(<font color="#ff40ff"><b>&quot;DOG&quot;</b></font>, dog);<br>
+<br>
+ActivityOptions options; =<br>
+options = ActivityOptions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .makeSceneTransitionAnimation(<font color="#00ff00"><b>this</b></font>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; view,&nbsp;<font color="#ff40ff"><b>&quot;photo_hero&quot;</b></font>);<br>
+startActivity(intent, options.toBundle());<br>
+</font>
+</body>
+</html>
