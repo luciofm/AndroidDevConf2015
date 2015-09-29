@@ -10,25 +10,25 @@ import com.luciofm.presentation.droiconit.R;
 
 public class CanvasGridLayout extends ViewGroup {
 
-	private int mSpacing = 0;
+    private int mSpacing = 0;
     private static final int MAX_CHILD = 6;
 
-	public CanvasGridLayout(Context context, AttributeSet attrs) {
-		super(context, attrs);
+    public CanvasGridLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
 
-		TypedArray a = context.obtainStyledAttributes(attrs,
-				R.styleable.CanvasGridLayout);
-		try {
-			mSpacing = a.getDimensionPixelSize(
+        TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.CanvasGridLayout);
+        try {
+            mSpacing = a.getDimensionPixelSize(
                     R.styleable.CanvasGridLayout_entrySpacing, 0);
-		} finally {
-			a.recycle();
-		}
-	}
+        } finally {
+            a.recycle();
+        }
+    }
 
-	public CanvasGridLayout(Context context) {
-		super(context);
-	}
+    public CanvasGridLayout(Context context) {
+        super(context);
+    }
 
     public int getSpacing() {
         return mSpacing;
@@ -54,7 +54,7 @@ public class CanvasGridLayout extends ViewGroup {
      * XXX - It could be more generic, but works fine right now...
      */
     @Override
-	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int modew = MeasureSpec.getMode(widthMeasureSpec);
         int modeh = MeasureSpec.getMode(heightMeasureSpec);
         if (modew != MeasureSpec.EXACTLY || modeh != MeasureSpec.EXACTLY)
@@ -155,12 +155,12 @@ public class CanvasGridLayout extends ViewGroup {
             measureTwoChild(0, quarterWidth, quarterHeight, padw, padw, !landscape);
             if (landscape) {
                 measureTwoChild(2, quarterWidth, quarterHeight, padw + mSpacing + quarterWidth,
-                                padh,
-                                !landscape);
+                        padh,
+                        !landscape);
             } else {
                 measureTwoChild(2, quarterWidth, quarterHeight, padw,
-                                padh + mSpacing + quarterHeight,
-                                !landscape);
+                        padh + mSpacing + quarterHeight,
+                        !landscape);
             }
         } else if (viewCount == 5) {
             /* measure 5 children
@@ -190,16 +190,16 @@ public class CanvasGridLayout extends ViewGroup {
 
             if (landscape) {
                 measureTwoChild(1, eighthWidht, eighthHeight, padw, padh + quarterHeight + mSpacing,
-                                landscape);
+                        landscape);
                 measureTwoChild(3, quarterWidth, quarterHeight, padw + mSpacing + quarterWidth,
-                                padh,
-                                !landscape);
+                        padh,
+                        !landscape);
             } else {
                 measureTwoChild(1, eighthWidht, eighthHeight, padw + quarterWidth + mSpacing, padh,
-                                landscape);
+                        landscape);
                 measureTwoChild(3, quarterWidth, quarterHeight, padw,
-                                padh + mSpacing + quarterHeight,
-                                !landscape);
+                        padh + mSpacing + quarterHeight,
+                        !landscape);
             }
         } else if (viewCount == 6) {
             /* measure 6 children
@@ -239,21 +239,21 @@ public class CanvasGridLayout extends ViewGroup {
 
             if (landscape) {
                 measureTwoChild(1, eighthWidht, eighthHeight, padw, padh + quarterHeight + mSpacing,
-                                landscape);
+                        landscape);
                 measureTwoChild(3, eighthWidht, eighthHeight, padw + halfWidth + mSpacing, padh,
-                                landscape);
+                        landscape);
 
             } else {
                 measureTwoChild(1, eighthWidht, eighthHeight, padw + quarterWidth + mSpacing, padh,
-                                landscape);
+                        landscape);
                 measureTwoChild(3, eighthWidht, eighthHeight, padw, padh + halfHeight + mSpacing,
-                                landscape);
+                        landscape);
             }
         }
 
-		setMeasuredDimension(resolveSize(widthSize, widthMeasureSpec),
-				resolveSize(heightSize, heightMeasureSpec));
-	}
+        setMeasuredDimension(resolveSize(widthSize, widthMeasureSpec),
+                resolveSize(heightSize, heightMeasureSpec));
+    }
 
     private void measureTwoChild(int pos, int width, int height, int startX, int startY,
                                  boolean landscape) {
@@ -277,50 +277,50 @@ public class CanvasGridLayout extends ViewGroup {
         }
     }
 
-	@Override
-	protected void onLayout(boolean changed, int l, int t, int r, int b) {
-		final int count = getChildCount();
-		for (int i = 0; i < count; i++) {
-			final View child = getChildAt(i);
-			LayoutParams lp = (LayoutParams) child.getLayoutParams();
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        final int count = getChildCount();
+        for (int i = 0; i < count; i++) {
+            final View child = getChildAt(i);
+            LayoutParams lp = (LayoutParams) child.getLayoutParams();
 
-			child.layout(lp.x, lp.y, lp.x + child.getMeasuredWidth(), lp.y
-					+ child.getMeasuredHeight());
-		}
-	}
+            child.layout(lp.x, lp.y, lp.x + child.getMeasuredWidth(), lp.y
+                    + child.getMeasuredHeight());
+        }
+    }
 
-	@Override
-	protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
-		return p instanceof LayoutParams;
-	}
+    @Override
+    protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
+        return p instanceof LayoutParams;
+    }
 
-	@Override
-	protected LayoutParams generateDefaultLayoutParams() {
-		return new LayoutParams(LayoutParams.MATCH_PARENT,
-				LayoutParams.WRAP_CONTENT);
-	}
+    @Override
+    protected LayoutParams generateDefaultLayoutParams() {
+        return new LayoutParams(LayoutParams.MATCH_PARENT,
+                LayoutParams.WRAP_CONTENT);
+    }
 
-	@Override
-	public LayoutParams generateLayoutParams(AttributeSet attrs) {
-		return new LayoutParams(getContext(), attrs);
-	}
+    @Override
+    public LayoutParams generateLayoutParams(AttributeSet attrs) {
+        return new LayoutParams(getContext(), attrs);
+    }
 
-	@Override
-	protected LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
-		return new LayoutParams(p.width, p.height);
-	}
+    @Override
+    protected LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
+        return new LayoutParams(p.width, p.height);
+    }
 
-	public static class LayoutParams extends ViewGroup.LayoutParams {
+    public static class LayoutParams extends ViewGroup.LayoutParams {
 
-		public int x;
-		public int y;
+        public int x;
+        public int y;
 
-		public LayoutParams(int width, int height) {
-			super(width, height);
-		}
+        public LayoutParams(int width, int height) {
+            super(width, height);
+        }
 
-		public LayoutParams(Context context, AttributeSet attrs) {
-			super(context, attrs);
-		}
-	}
+        public LayoutParams(Context context, AttributeSet attrs) {
+            super(context, attrs);
+        }
+    }
 }
