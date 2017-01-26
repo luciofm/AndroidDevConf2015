@@ -58,7 +58,7 @@ public class QuesionsFragment extends BaseFragment {
     int white;
 
     private SpannableString title = new SpannableString("QUESTIONS??");
-    AnimatorSet fireworks;
+    AnimatorSet spanSet;
 
     public QuesionsFragment() {
     }
@@ -97,8 +97,8 @@ public class QuesionsFragment extends BaseFragment {
     public void onNextPressed() {
         switch (++currentStep) {
             case 2:
-                if (fireworks != null)
-                    fireworks.cancel();
+                if (spanSet != null)
+                    spanSet.cancel();
                 animateOut();
                 break;
             default:
@@ -112,14 +112,14 @@ public class QuesionsFragment extends BaseFragment {
     }
 
     private void animateTitle() {
-        buildFireworksAnimation(0, title.length() - 1);
+        buildSpansAnimation(0, title.length() - 1);
     }
 
-    private static final int FIREWORK_ANIM_DURATION = 1200;
-    private static final int FIREWORK_ANIM_DELAY = 120;
+    private static final int SPAN_ANIM_DURATION = 1200;
+    private static final int SPAN_ANIM_DELAY = 120;
     private int currentDelay = 0;
 
-    private void buildFireworksAnimation(int start, int end) {
+    private void buildSpansAnimation(int start, int end) {
 
         float textSize = text1.getTextSize();
 
@@ -143,7 +143,7 @@ public class QuesionsFragment extends BaseFragment {
         for (TextSizeSpan span : spans) {
             ObjectAnimator anim = ObjectAnimator.ofInt(span, SIZE_SPAN_PROPERTY, 0, (int) textSize);
             anim.setInterpolator(new BounceInterpolator());
-            anim.setDuration(FIREWORK_ANIM_DURATION);
+            anim.setDuration(SPAN_ANIM_DURATION);
             anim.setStartDelay(currentDelay);
             animators.add(anim);
             anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -153,12 +153,12 @@ public class QuesionsFragment extends BaseFragment {
                         text1.setText(title);
                 }
             });
-            currentDelay += FIREWORK_ANIM_DELAY;
+            currentDelay += SPAN_ANIM_DELAY;
         }
 
-        fireworks = new AnimatorSet();
-        fireworks.playTogether(animators);
-        fireworks.start();
+        spanSet = new AnimatorSet();
+        spanSet.playTogether(animators);
+        spanSet.start();
     }
 
     private static final Property<TextSizeSpan, Integer> SIZE_SPAN_PROPERTY =
